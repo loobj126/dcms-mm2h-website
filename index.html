@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<script>
+(function() {
+  try {
+    var lang = sessionStorage.getItem('dcms_lang');
+    if (lang && lang !== 'en') {
+      document.documentElement.classList.add('i18n-pending');
+      // Safety net: never leave the page hidden for more than a moment,
+      // even if something else on the page prevents the normal reveal.
+      setTimeout(function() {
+        document.documentElement.classList.remove('i18n-pending');
+      }, 1500);
+    }
+  } catch (e) { /* sessionStorage unavailable; skip */ }
+})();
+</script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DCMS (MM2H) — Malaysia My Second Home Advisory</title>
+<meta name="description" content="DCMS (MM2H) Sdn Bhd guides families and investors through every stage of Malaysia's My Second Home programme.">
+<link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon-32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="assets/img/favicon-16.png">
+<link rel="apple-touch-icon" sizes="180x180" href="assets/img/favicon-180.png">
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+<!-- ============ HEADER ============ -->
+<header class="site-header">
+  <div class="header-inner">
+    <a href="index.html" class="brand">
+      <img src="assets/img/logo.png" alt="DCMS MM2H logo">
+      <span class="brand-word">DCMS<span>MM2H ADVISORY</span></span>
+    </a>
+
+    <nav class="main-nav">
+      <a href="index.html" data-i18n="nav.home">Home</a>
+      <a href="about-us.html" data-i18n="nav.about">About Us</a>
+      <div class="has-dropdown">
+        <button type="button" data-i18n="nav.services">Services</button>
+        <div class="dropdown">
+          <a href="services/mm2h-new-application.html" data-i18n="nav.servicesMm2h">MM2H New Application</a>
+          <a href="services/mm2h-renewal.html" data-i18n="nav.servicesRenewal">MM2H Renewal</a>
+          <a href="services/property-sourcing-advisory.html" data-i18n="nav.servicesProperty">Property Sourcing &amp; Advisory</a>
+          <a href="services/banking-assistance.html" data-i18n="nav.servicesBanking">Banking Assistance</a>
+          <a href="services/medical-insurance-coordination.html" data-i18n="nav.servicesMedical">Medical &amp; Insurance Coordination</a>
+        </div>
+      </div>
+      <div class="has-dropdown">
+        <button type="button" data-i18n="nav.calculators">Calculators</button>
+        <div class="dropdown">
+          <a href="calculators/mm2h-calculator.html" data-i18n="nav.calcMm2h">MM2H Calculator</a>
+          <a href="calculators/legal-fees-calculator.html" data-i18n="nav.calcLegal">Legal Fees Calculator</a>
+        </div>
+      </div>
+      <a href="contact-us.html" data-i18n="nav.contact">Contact Us</a>
+    </nav>
+
+    <div class="header-actions">
+      <div class="mm2h-badge">
+        <img src="assets/img/mm2h-official-logo.png" alt="Malaysia My Second Home official logo">
+      </div>
+      <div class="lang-switch">
+        <button class="lang-current" type="button" aria-haspopup="true">
+          <span class="flag-circle"></span>
+          <span class="lang-label"></span>
+        </button>
+        <div class="lang-menu"></div>
+      </div>
+      <button class="nav-toggle" aria-label="Open menu">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+      </button>
+    </div>
+  </div>
+</header>
+
+<!-- ============ MOBILE NAV ============ -->
+<div class="mobile-nav">
+  <div class="mobile-nav-top">
+    <img src="assets/img/logo.png" alt="DCMS MM2H" style="height:40px">
+    <button class="mobile-nav-close" aria-label="Close menu" style="background:none;border:none;font-size:1.8rem;cursor:pointer;">&times;</button>
+  </div>
+  <a href="index.html" data-i18n="nav.home">Home</a>
+  <a href="about-us.html" data-i18n="nav.about">About Us</a>
+  <details>
+    <summary data-i18n="nav.services">Services</summary>
+    <div class="sub-links">
+      <a href="services/mm2h-new-application.html" data-i18n="nav.servicesMm2h">MM2H New Application</a>
+      <a href="services/mm2h-renewal.html" data-i18n="nav.servicesRenewal">MM2H Renewal</a>
+      <a href="services/property-sourcing-advisory.html" data-i18n="nav.servicesProperty">Property Sourcing &amp; Advisory</a>
+      <a href="services/banking-assistance.html" data-i18n="nav.servicesBanking">Banking Assistance</a>
+      <a href="services/medical-insurance-coordination.html" data-i18n="nav.servicesMedical">Medical &amp; Insurance Coordination</a>
+    </div>
+  </details>
+  <details>
+    <summary data-i18n="nav.calculators">Calculators</summary>
+    <div class="sub-links">
+      <a href="calculators/mm2h-calculator.html" data-i18n="nav.calcMm2h">MM2H Calculator</a>
+      <a href="calculators/legal-fees-calculator.html" data-i18n="nav.calcLegal">Legal Fees Calculator</a>
+    </div>
+  </details>
+  <a href="contact-us.html" data-i18n="nav.contact">Contact Us</a>
+</div>
+
+<!-- ============ HERO ============ -->
+<section class="hero">
+  <div class="hero-inner">
+    <div class="hero-copy">
+      <p class="hero-eyebrow" data-i18n="hero.eyebrow">Malaysia My Second Home</p>
+      <h1 data-i18n="hero.title">A second home in Malaysia, built on certainty</h1>
+      <p class="lede" data-i18n="hero.subtitle">DCMS (MM2H) guides families and investors through every stage of Malaysia's residency programme — from first eligibility check to the day you collect your keys.</p>
+      <div class="hero-actions">
+        <a href="calculators/mm2h-calculator.html" class="btn btn-primary" data-i18n="hero.ctaPrimary">Check your eligibility</a>
+        <a href="contact-us.html" class="btn btn-outline" data-i18n="hero.ctaSecondary">Talk to an advisor</a>
+      </div>
+    </div>
+    <div class="hero-visual"></div>
+  </div>
+</section>
+
+<!-- ============ MM2H CATEGORY TABLE ============ -->
+<section id="categories" class="section-dark">
+  <div class="wrap">
+    <div class="section-head">
+<h2 data-i18n="categories.title">MM2H visa categories at a glance</h2>
+      <p class="lede" data-i18n="categories.intro">Malaysia's My Second Home programme is organised into five categories, each with its own deposit, property and residency requirements. Figures below are sourced from the One Stop Centre MM2H (Ministry of Tourism, Art and Culture).</p>
+    </div>
+
+    <div class="table-scroll">
+      <table class="category-table">
+        <thead>
+          <tr>
+            <th data-i18n="categories.colCategory">Requirement</th>
+            <th data-i18n="categories.colPlatinum">Platinum</th>
+            <th data-i18n="categories.colGold">Gold</th>
+            <th data-i18n="categories.colSilver">Silver</th>
+            <th data-i18n="categories.colSezYoung">SEZ / SFZ 21–49</th>
+            <th data-i18n="categories.colSezSenior">SEZ / SFZ 50+</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th data-i18n="categories.rowDeposit">Fixed deposit</th>
+            <td>USD 1,000,000</td>
+            <td>USD 500,000</td>
+            <td>USD 150,000</td>
+            <td class="col-divider">USD 65,000</td>
+            <td>USD 32,000</td>
+          </tr>
+          <tr>
+            <th data-i18n="categories.rowTerm">MM2H term</th>
+            <td data-i18n="categories.term20">20 years renewable</td>
+            <td data-i18n="categories.term15">15 years renewable</td>
+            <td data-i18n="categories.term5">5 years renewable</td>
+            <td colspan="2" class="col-divider text-center" data-i18n="categories.term10">10 years renewable</td>
+          </tr>
+          <tr>
+            <th data-i18n="categories.rowAge">Minimum age (main applicant)</th>
+            <td colspan="3" class="text-center">25</td>
+            <td colspan="2" class="col-divider text-center">21</td>
+          </tr>
+          <tr>
+            <th data-i18n="categories.rowProperty">Compulsory property purchase</th>
+            <td>Min. RM2,000,000</td>
+            <td>Min. RM1,000,000</td>
+            <td>Min. RM600,000</td>
+            <td colspan="2" class="col-divider text-center" data-i18n="categories.propertySez">As set for SEZ development</td>
+          </tr>
+          <tr>
+            <th data-i18n="categories.rowParticipating">Participating fee</th>
+            <td>RM200,000</td>
+            <td>RM3,000</td>
+            <td>RM1,000</td>
+            <td colspan="2" class="col-divider text-center">RM1,000</td>
+          </tr>
+          <tr>
+            <th data-i18n="categories.rowProcessing">Processing fee</th>
+            <td colspan="5" class="text-center" data-i18n="categories.processingNote">RM5,000 for the principal applicant, plus RM2,500 for each dependent.</td>
+          </tr>
+          <tr>
+            <th data-i18n="categories.rowStay">Minimum stay in Malaysia</th>
+            <td colspan="3" class="text-center" data-i18n="categories.stay2549">90 days/year (age 25–49) · none for 50+</td>
+            <td colspan="2" class="col-divider" data-i18n="categories.stay2149">90 days/year (21–49) · none for 50+</td>
+          </tr>
+          <tr>
+            <th data-i18n="categories.rowRenewal">Renewal fee</th>
+            <td>RM5,000</td>
+            <td>RM3,000</td>
+            <td>RM1,500</td>
+            <td colspan="2" class="col-divider text-center">RM300</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <p style="margin-top:1.2rem; font-size:0.85rem;" data-i18n="categories.footnote">Figures are indicative and subject to change by the Malaysian government. Speak with our advisory team for a personalised assessment.</p>
+  </div>
+</section>
+
+<div class="bloom-divider"><img src="assets/img/bloom-divider.svg" alt=""></div>
+
+<!-- ============ SERVICES PREVIEW ============ -->
+<section id="services">
+  <div class="wrap">
+    <div class="section-head">
+<h2 data-i18n="servicesHome.title">Every step of your relocation, handled</h2>
+    </div>
+    <div class="grid-3">
+      <div class="service-card">
+        <div class="icon-badge">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M9 12l2 2 4-4M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+        </div>
+        <h3 data-i18n="servicesHome.card1Title">MM2H Applications &amp; Renewals</h3>
+        <p data-i18n="servicesHome.card1Text">New applications, renewals, terminations and add-ons across all MM2H categories, prepared and filed correctly the first time.</p>
+        <a class="card-link" href="services/mm2h-new-application.html" data-i18n="servicesHome.linkText">Learn more</a>
+      </div>
+      <div class="service-card">
+        <div class="icon-badge">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 12l9-9 9 9M5 10v10h14V10"/></svg>
+        </div>
+        <h3 data-i18n="servicesHome.card2Title">Property Sourcing &amp; Advisory</h3>
+        <p data-i18n="servicesHome.card2Text">We identify residential properties that satisfy your category's compulsory purchase requirement and match your lifestyle.</p>
+        <a class="card-link" href="services/property-sourcing-advisory.html" data-i18n="servicesHome.linkText">Learn more</a>
+      </div>
+      <div class="service-card">
+        <div class="icon-badge">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="6" width="18" height="13" rx="1"/><path d="M3 10h18M8 3v4M16 3v4"/></svg>
+        </div>
+        <h3 data-i18n="servicesHome.card3Title">Banking Assistance</h3>
+        <p data-i18n="servicesHome.card3Text">Support opening the Malaysian bank accounts required to place and manage your MM2H fixed deposit.</p>
+        <a class="card-link" href="services/banking-assistance.html" data-i18n="servicesHome.linkText">Learn more</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="bloom-divider"><img src="assets/img/bloom-divider.svg" alt=""></div>
+
+<!-- ============ FAQ ============ -->
+<section id="faq" class="section-dark">
+  <div class="wrap">
+    <div class="section-head">
+<h2 data-i18n="faq.title">Frequently asked questions</h2>
+    </div>
+    <div class="faq-list">
+      <div class="faq-item">
+        <button class="faq-q"><span data-i18n="faq.q1">What is the Malaysia My Second Home (MM2H) programme?</span><span class="plus"></span></button>
+        <div class="faq-a"><div class="faq-a-inner" data-i18n="faq.a1">MM2H is a long-term residency programme run by the Malaysian government that allows foreign nationals to live in Malaysia on a renewable pass, with terms ranging from 5 to 20 years depending on category. It suits retirees, families, investors, and remote professionals looking for a second home in Southeast Asia.</div></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q"><span data-i18n="faq.q2">Who is eligible to apply for MM2H?</span><span class="plus"></span></button>
+        <div class="faq-a"><div class="faq-a-inner" data-i18n="faq.a2">Eligibility depends on your chosen category. Platinum, Gold, and Silver require a minimum principal applicant age of 25; the SEZ/SFZ categories require a minimum age of 21. All applicants must also show proof of the required fixed deposit and meet the income and property requirements set by the One Stop Centre MM2H.</div></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q"><span data-i18n="faq.q3">Can I include my family in my application?</span><span class="plus"></span></button>
+        <div class="faq-a"><div class="faq-a-inner" data-i18n="faq.a3">Yes. A legal spouse, unmarried children up to age 35, and parents or parents-in-law can be included as dependents on the same application, subject to the applicable processing fee per dependent.</div></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q"><span data-i18n="faq.q4">How long is the MM2H visa valid for?</span><span class="plus"></span></button>
+        <div class="faq-a"><div class="faq-a-inner" data-i18n="faq.a4">Validity depends on category: Platinum is 20 years, Gold is 15 years, Silver is 5 years, and both SEZ/SFZ tiers are 10 years. All terms are renewable, subject to continued compliance with programme conditions.</div></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q"><span data-i18n="faq.q5">What are the financial requirements to apply?</span><span class="plus"></span></button>
+        <div class="faq-a"><div class="faq-a-inner" data-i18n="faq.a5">Each category requires a fixed deposit placed in a Malaysian bank: USD 1,000,000 for Platinum, USD 500,000 for Gold, USD 150,000 for Silver, and USD 65,000 or USD 32,000 for SEZ/SFZ depending on age. Platinum, Gold, and Silver also require a compulsory residential property purchase at or above a set minimum price.</div></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q"><span data-i18n="faq.q6">Can MM2H visa holders buy property in Malaysia?</span><span class="plus"></span></button>
+        <div class="faq-a"><div class="faq-a-inner" data-i18n="faq.a6">Yes. Platinum, Gold, and Silver categories require a compulsory residential property purchase at or above the minimum price set for that category. SEZ/SFZ categories follow the minimum price set for the relevant Special Economic Zone development.</div></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q"><span data-i18n="faq.q7">Is foreign income taxed once I hold MM2H status?</span><span class="plus"></span></button>
+        <div class="faq-a"><div class="faq-a-inner" data-i18n="faq.a7">Foreign-sourced funds, income, and profit earned on your MM2H fixed deposit are exempt from Malaysian tax under current programme rules. Malaysian-sourced income may still be taxable depending on your circumstances.</div></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q"><span data-i18n="faq.q8">What documents are required to apply?</span><span class="plus"></span></button>
+        <div class="faq-a"><div class="faq-a-inner" data-i18n="faq.a8">Typical requirements include a valid passport, proof of income or savings, a medical examination report, a police clearance certificate, passport-sized photographs, and — where dependents are included — marriage and birth certificates. Exact requirements vary by nationality and category, and all documents must be properly translated and certified where required.</div></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q"><span data-i18n="faq.q9">How long does the MM2H application process take?</span><span class="plus"></span></button>
+        <div class="faq-a"><div class="faq-a-inner" data-i18n="faq.a9">Processing times vary by category and how quickly documents and financial requirements are completed, but applicants typically move through initial submission, in-principle approval, deposit placement, and final visa issuance across several months. Working with an experienced advisor helps avoid delays caused by incomplete documentation.</div></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q"><span data-i18n="faq.q10">Do I need to stay in Malaysia full-time with MM2H?</span><span class="plus"></span></button>
+        <div class="faq-a"><div class="faq-a-inner" data-i18n="faq.a10">No. Platinum, Gold, and Silver categories require a minimum stay of 90 days per year only if the principal applicant is under 50; there is no minimum stay requirement for those aged 50 and above. SEZ/SFZ categories follow the same age-based structure.</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CTA ============ -->
+<section>
+  <div class="wrap">
+    <div class="cta-banner">
+      <div>
+        <h2 data-i18n="cta.title">Ready to plan your move to Malaysia?</h2>
+        <p data-i18n="cta.text">Get a personalised, no-obligation assessment from our advisory team.</p>
+      </div>
+      <a href="contact-us.html" class="btn btn-gold" data-i18n="cta.button">Contact us today</a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FOOTER ============ -->
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div class="footer-col">
+        <a href="index.html" class="brand" style="margin-bottom:1rem;">
+          <img src="assets/img/logo.png" alt="DCMS MM2H" style="height:44px;">
+          <span class="brand-word">DCMS<span>MM2H ADVISORY</span></span>
+        </a>
+        <p data-i18n="footer.aboutText">We guide families and investors through every stage of Malaysia's My Second Home programme — from first eligibility check to settling in.</p>
+      </div>
+      <div class="footer-col">
+        <h4 data-i18n="footer.quickLinks">Quick Links</h4>
+        <a href="index.html" data-i18n="footer.linkHome">Home</a>
+        <a href="about-us.html" data-i18n="footer.linkAbout">About Us</a>
+        <a href="services/mm2h-new-application.html" data-i18n="footer.linkServices">Services</a>
+      </div>
+      <div class="footer-col">
+        <h4 data-i18n="footer.exploreTitle">Calculators</h4>
+        <a href="calculators/mm2h-calculator.html" data-i18n="nav.calcMm2h">MM2H Calculator</a>
+        <a href="calculators/legal-fees-calculator.html" data-i18n="nav.calcLegal">Legal Fees Calculator</a>
+      </div>
+      <div class="footer-col">
+        <h4 data-i18n="footer.contactTitle">Contact</h4>
+        <p><strong>DCMS (MM2H) Sdn Bhd</strong><br>202301033280 (1854708-T)</p>
+        <p>12-03 (2) Stellar Suites, Jalan Puteri 4/7, Bandar Puteri, 47100 Puchong, Selangor Darul Ehsan, Malaysia</p>
+        <a href="tel:+60350401349"><span data-i18n="footer.officePhoneLabel">Office</span>: +603-5040 1349</a>
+        <a href="tel:+60123683149"><span data-i18n="footer.mobilePhoneLabel">Mobile</span>: +6012-3683149</a>
+        <a href="mailto:bj-mm2h@dcmktgsolution.com"><span data-i18n="footer.emailLabel">Email</span>: bj-mm2h@dcmktgsolution.com</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; 2026 DCMS (MM2H) Sdn Bhd. <span data-i18n="footer.copyright">All rights reserved.</span></span>
+    </div>
+  </div>
+</footer>
+
+<a class="wa-float" href="https://wa.me/60123683149?text=Hello%2C%20I%20would%20like%20to%20know%20more%20about%20MM2H" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">
+  <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 2C6.477 2 2 6.477 2 12c0 1.99.578 3.85 1.578 5.412L2 22l4.588-1.578A9.953 9.953 0 0012 22c5.523 0 10-4.477 10-10S17.523 2 12 2zm0 18a7.95 7.95 0 01-4.052-1.106l-.29-.173-3.012 1.037 1.037-3.012-.173-.29A7.95 7.95 0 014 12c0-4.411 3.589-8 8-8s8 3.589 8 8-3.589 8-8 8z"/></svg>
+</a>
+
+<script>window.I18N_BASE = 'assets/data/i18n/';</script>
+<script src="assets/data/languages.js"></script>
+<script src="assets/js/i18n-data.js"></script>
+<script src="assets/js/i18n.js"></script>
+<script src="assets/js/main.js"></script>
+</body>
+</html>

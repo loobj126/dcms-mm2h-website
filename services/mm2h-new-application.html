@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<script>
+(function() {
+  try {
+    var lang = sessionStorage.getItem('dcms_lang');
+    if (lang && lang !== 'en') {
+      document.documentElement.classList.add('i18n-pending');
+      // Safety net: never leave the page hidden for more than a moment,
+      // even if something else on the page prevents the normal reveal.
+      setTimeout(function() {
+        document.documentElement.classList.remove('i18n-pending');
+      }, 1500);
+    }
+  } catch (e) { /* sessionStorage unavailable; skip */ }
+})();
+</script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MM2H New Application — DCMS (MM2H)</title>
+<meta name="description" content="We manage the full new-application process for every MM2H category.">
+<link rel="icon" type="image/png" sizes="32x32" href="../assets/img/favicon-32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="../assets/img/favicon-16.png">
+<link rel="apple-touch-icon" sizes="180x180" href="../assets/img/favicon-180.png">
+<link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="header-inner">
+    <a href="../index.html" class="brand">
+      <img src="../assets/img/logo.png" alt="DCMS MM2H logo">
+      <span class="brand-word">DCMS<span>MM2H ADVISORY</span></span>
+    </a>
+    <nav class="main-nav">
+      <a href="../index.html" data-i18n="nav.home">Home</a>
+      <a href="../about-us.html" data-i18n="nav.about">About Us</a>
+      <div class="has-dropdown">
+        <button type="button" data-i18n="nav.services">Services</button>
+        <div class="dropdown">
+          <a href="../services/mm2h-new-application.html" data-i18n="nav.servicesMm2h">MM2H New Application</a>
+          <a href="../services/mm2h-renewal.html" data-i18n="nav.servicesRenewal">MM2H Renewal</a>
+          <a href="../services/property-sourcing-advisory.html" data-i18n="nav.servicesProperty">Property Sourcing &amp; Advisory</a>
+          <a href="../services/banking-assistance.html" data-i18n="nav.servicesBanking">Banking Assistance</a>
+          <a href="../services/medical-insurance-coordination.html" data-i18n="nav.servicesMedical">Medical &amp; Insurance Coordination</a>
+        </div>
+      </div>
+      <div class="has-dropdown">
+        <button type="button" data-i18n="nav.calculators">Calculators</button>
+        <div class="dropdown">
+          <a href="../calculators/mm2h-calculator.html" data-i18n="nav.calcMm2h">MM2H Calculator</a>
+          <a href="../calculators/legal-fees-calculator.html" data-i18n="nav.calcLegal">Legal Fees Calculator</a>
+        </div>
+      </div>
+      <a href="../contact-us.html" data-i18n="nav.contact">Contact Us</a>
+    </nav>
+    <div class="header-actions">
+      <div class="mm2h-badge"><img src="../assets/img/mm2h-official-logo.png" alt="Malaysia My Second Home official logo"></div>
+      <div class="lang-switch">
+        <button class="lang-current" type="button" aria-haspopup="true"><span class="flag-circle"></span><span class="lang-label"></span></button>
+        <div class="lang-menu"></div>
+      </div>
+      <button class="nav-toggle" aria-label="Open menu">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+      </button>
+    </div>
+  </div>
+</header>
+
+<div class="mobile-nav">
+  <div class="mobile-nav-top">
+    <img src="../assets/img/logo.png" alt="DCMS MM2H" style="height:40px">
+    <button class="mobile-nav-close" aria-label="Close menu" style="background:none;border:none;font-size:1.8rem;cursor:pointer;">&times;</button>
+  </div>
+  <a href="../index.html" data-i18n="nav.home">Home</a>
+  <a href="../about-us.html" data-i18n="nav.about">About Us</a>
+  <details>
+    <summary data-i18n="nav.services">Services</summary>
+    <div class="sub-links">
+      <a href="../services/mm2h-new-application.html" data-i18n="nav.servicesMm2h">MM2H New Application</a>
+      <a href="../services/mm2h-renewal.html" data-i18n="nav.servicesRenewal">MM2H Renewal</a>
+      <a href="../services/property-sourcing-advisory.html" data-i18n="nav.servicesProperty">Property Sourcing &amp; Advisory</a>
+      <a href="../services/banking-assistance.html" data-i18n="nav.servicesBanking">Banking Assistance</a>
+      <a href="../services/medical-insurance-coordination.html" data-i18n="nav.servicesMedical">Medical &amp; Insurance Coordination</a>
+    </div>
+  </details>
+  <details>
+    <summary data-i18n="nav.calculators">Calculators</summary>
+    <div class="sub-links">
+      <a href="../calculators/mm2h-calculator.html" data-i18n="nav.calcMm2h">MM2H Calculator</a>
+      <a href="../calculators/legal-fees-calculator.html" data-i18n="nav.calcLegal">Legal Fees Calculator</a>
+    </div>
+  </details>
+  <a href="../contact-us.html" data-i18n="nav.contact">Contact Us</a>
+</div>
+
+
+<section class="page-hero" style="padding-top:2rem;">
+  <div class="wrap">
+    <div class="content-split" style="align-items:start;">
+      <div>
+        <h1 data-i18n="services.mm2hNew.title">MM2H New Application</h1>
+        <p class="lede" data-i18n="services.mm2hNew.legalIntro">A Malaysia My Second Home (MM2H) application is far more than filling out forms; it is a high-stakes legal and financial submission governed by the Ministry of Tourism, Arts and Culture (MOTAC) and the Immigration Department of Malaysia.</p>
+        <p class="lede" data-i18n="services.mm2hNew.intro">We manage the full new-application process for every MM2H category, so your submission is accurate and complete the first time.</p>
+      </div>
+      <div>
+        <img src="../assets/img/service-new-application-photo.jpg" alt="Family holding passports at the airport, ready to relocate to Malaysia" style="width:100%; max-width:340px; height:auto; border-radius:var(--radius); border:1px solid var(--line);">
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section-dark">
+  <div class="wrap">
+    <div class="content-split">
+      <div>
+        <h2 data-i18n="services.mm2hNew.stepsTitle">How the application process works</h2>
+        <div class="step-list">
+          <div class="step-row"><div class="step-num">01</div><div><h3 data-i18n="services.mm2hNew.step1Title">Eligibility assessment</h3><p data-i18n="services.mm2hNew.step1Text">We review your age, savings, income, and family composition to recommend the right MM2H category for you.</p></div></div>
+          <div class="step-row"><div class="step-num">02</div><div><h3 data-i18n="services.mm2hNew.step2Title">Document preparation</h3><p data-i18n="services.mm2hNew.step2Text">We prepare and check your supporting documents — financial statements, medical reports, and personal declarations — against current requirements.</p></div></div>
+          <div class="step-row"><div class="step-num">03</div><div><h3 data-i18n="services.mm2hNew.step3Title">Application submission</h3><p data-i18n="services.mm2hNew.step3Text">Your application is submitted to the One Stop Centre MM2H on your behalf, with our team tracking its progress.</p></div></div>
+          <div class="step-row"><div class="step-num">04</div><div><h3 data-i18n="services.mm2hNew.step4Title">In-principle approval &amp; deposit</h3><p data-i18n="services.mm2hNew.step4Text">Once approved in principle, we guide you through opening a Malaysian bank account and placing your fixed deposit.</p></div></div>
+          <div class="step-row"><div class="step-num">05</div><div><h3 data-i18n="services.mm2hNew.step5Title">Visa issuance</h3><p data-i18n="services.mm2hNew.step5Text">We coordinate final processing and collection of your MM2H pass, and brief you on your ongoing obligations.</p></div></div>
+        </div>
+      </div>
+      <div class="side-card">
+        <h4 data-i18n="services.mm2hNew.sideTitle">What you'll typically need</h4>
+        <ul>
+          <li data-i18n="services.mm2hNew.sideItem1">Valid passport with sufficient validity</li>
+          <li data-i18n="services.mm2hNew.sideItem2">Proof of income or savings</li>
+          <li data-i18n="services.mm2hNew.sideItem3">Medical examination report</li>
+          <li data-i18n="services.mm2hNew.sideItem4">Police clearance certificate</li>
+          <li data-i18n="services.mm2hNew.sideItem5">Passport-sized photographs</li>
+        </ul>
+        <p style="font-size:0.82rem; color:var(--ink-soft);" data-i18n="services.mm2hNew.sideNote">Exact requirements vary by category and nationality — we confirm your personal checklist during the eligibility assessment.</p>
+        <a href="../calculators/mm2h-calculator.html" class="btn btn-primary" style="width:100%; justify-content:center;" data-i18n="hero.ctaPrimary">Check your eligibility</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="bloom-divider"><img src="../assets/img/bloom-divider.svg" alt=""></div>
+<section style="padding-top:0;">
+  <div class="wrap">
+    <div class="section-head">
+</div>
+    <div class="grid-3">
+      <div class="service-card">
+        <h3 style="font-size:1.05rem;" data-i18n="nav.servicesRenewal">MM2H Renewal</h3>
+        <a class="card-link" href="mm2h-renewal.html" data-i18n="services.linkText">Learn more</a>
+      </div>
+      <div class="service-card">
+        <h3 style="font-size:1.05rem;" data-i18n="nav.servicesProperty">Property Sourcing & Advisory</h3>
+        <a class="card-link" href="property-sourcing-advisory.html" data-i18n="services.linkText">Learn more</a>
+      </div>
+      <div class="service-card">
+        <h3 style="font-size:1.05rem;" data-i18n="nav.servicesBanking">Banking Assistance</h3>
+        <a class="card-link" href="banking-assistance.html" data-i18n="services.linkText">Learn more</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="cta-banner">
+      <div>
+        <h2 data-i18n="cta.title">Ready to plan your move to Malaysia?</h2>
+        <p data-i18n="cta.text">Get a personalised, no-obligation assessment from our advisory team.</p>
+      </div>
+      <a href="../contact-us.html" class="btn btn-gold" data-i18n="cta.button">Contact us today</a>
+    </div>
+  </div>
+</section>
+
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div class="footer-col">
+        <a href="../index.html" class="brand" style="margin-bottom:1rem;">
+          <img src="../assets/img/logo.png" alt="DCMS MM2H" style="height:44px;">
+          <span class="brand-word">DCMS<span>MM2H ADVISORY</span></span>
+        </a>
+        <p data-i18n="footer.aboutText">We guide families and investors through every stage of Malaysia's My Second Home programme — from first eligibility check to settling in.</p>
+      </div>
+      <div class="footer-col">
+        <h4 data-i18n="footer.quickLinks">Quick Links</h4>
+        <a href="../index.html" data-i18n="footer.linkHome">Home</a>
+        <a href="../about-us.html" data-i18n="footer.linkAbout">About Us</a>
+        <a href="../services/mm2h-new-application.html" data-i18n="footer.linkServices">Services</a>
+      </div>
+      <div class="footer-col">
+        <h4 data-i18n="footer.exploreTitle">Calculators</h4>
+        <a href="../calculators/mm2h-calculator.html" data-i18n="nav.calcMm2h">MM2H Calculator</a>
+        <a href="../calculators/legal-fees-calculator.html" data-i18n="nav.calcLegal">Legal Fees Calculator</a>
+      </div>
+      <div class="footer-col">
+        <h4 data-i18n="footer.contactTitle">Contact</h4>
+        <p><strong>DCMS (MM2H) Sdn Bhd</strong><br>202301033280 (1854708-T)</p>
+        <p>12-03 (2) Stellar Suites, Jalan Puteri 4/7, Bandar Puteri, 47100 Puchong, Selangor Darul Ehsan, Malaysia</p>
+        <a href="tel:+60350401349"><span data-i18n="footer.officePhoneLabel">Office</span>: +603-5040 1349</a>
+        <a href="tel:+60123683149"><span data-i18n="footer.mobilePhoneLabel">Mobile</span>: +6012-3683149</a>
+        <a href="mailto:bj-mm2h@dcmktgsolution.com"><span data-i18n="footer.emailLabel">Email</span>: bj-mm2h@dcmktgsolution.com</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; 2026 DCMS (MM2H) Sdn Bhd. <span data-i18n="footer.copyright">All rights reserved.</span></span>
+    </div>
+  </div>
+</footer>
+
+<a class="wa-float" href="https://wa.me/60123683149?text=Hello%2C%20I%20would%20like%20to%20know%20more%20about%20MM2H" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">
+  <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 2C6.477 2 2 6.477 2 12c0 1.99.578 3.85 1.578 5.412L2 22l4.588-1.578A9.953 9.953 0 0012 22c5.523 0 10-4.477 10-10S17.523 2 12 2zm0 18a7.95 7.95 0 01-4.052-1.106l-.29-.173-3.012 1.037 1.037-3.012-.173-.29A7.95 7.95 0 014 12c0-4.411 3.589-8 8-8s8 3.589 8 8-3.589 8-8 8z"/></svg>
+</a>
+
+<script>window.I18N_BASE = '../assets/data/i18n/';</script>
+<script src="../assets/data/languages.js"></script>
+<script src="../assets/js/i18n-data.js"></script>
+<script src="../assets/js/i18n.js"></script>
+<script src="../assets/js/main.js"></script>
+</body>
+</html>
