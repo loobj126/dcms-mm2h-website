@@ -7,6 +7,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initLanguageSwitcher();
   initMobileNav();
   initFaq();
+  initImageReveal();
 });
 
 /* ---------------- Language switcher ---------------- */
@@ -122,5 +123,37 @@ function initFaq() {
       item.closest('.faq-list').querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
       if (!wasOpen) item.classList.add('open');
     });
+  });
+}
+
+/* ---------------- Scroll reveal animation for photos ---------------- */
+function initImageReveal() {
+  const images = document.querySelectorAll('.reveal-img');
+  if (!images.length) return;
+
+  if (!('IntersectionObserver' in window)) {
+    // Fallback for very old browsers: just show the images immediately.
+    images.forEach(img => img.classList.add('is-visible'));
+    return;
+  }
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('is-visible');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.15, rootMargin: '0px 0px -40px 0px' });
+
+  images.forEach(img => {
+    // If the image is already in view on page load (e.g. hero photo), reveal
+    // it immediately rather than waiting for a scroll event that may never come.
+    const rect = img.getBoundingClientRect();
+    if (rect.top < window.innerHeight && rect.bottom > 0) {
+      img.classList.add('is-visible');
+    } else {
+      observer.observe(img);
+    }
   });
 }
