@@ -776,6 +776,7 @@ footer.site-footer {
 @media (max-width: 560px) { .footer-grid { grid-template-columns: 1fr; } }
 footer .brand-word { color: var(--cream); }
 footer .brand-word span { color: var(--gold-light); }
+footer .footer-col a.brand { display: flex; }
 .footer-col h4 {
   color: var(--gold-light);
   font-size: 0.82rem;
