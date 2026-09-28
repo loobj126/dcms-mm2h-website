@@ -93,7 +93,7 @@ window.I18N_DATA.en = {
   },
   "license": {
     "title": "Approved MM2H Agent",
-    "text": "We have been an approved agent for the Malaysia My Second Home programme, and our MM2H agent's licence is copied below.",
+    "text": "As an authorized and fully licensed Malaysia My Second Home (MM2H) agency, we provide accredited sponsorship services. Please find a copy of our official operating license below.",
     "certAlt": "DCMS (MM2H) Sdn Bhd — MM2H agent licence certificate",
     "qrAlt": "MM2H agent licence QR code and registration number"
   },
@@ -1117,7 +1117,7 @@ window.I18N_DATA.id = {
   },
   "license": {
     "title": "Agen MM2H Resmi",
-    "text": "Kami adalah agen resmi untuk program Malaysia My Second Home, dan lisensi agen MM2H kami disalin di bawah ini.",
+    "text": "Sebagai agensi Malaysia My Second Home (MM2H) yang resmi dan berlisensi penuh, kami menyediakan layanan sponsor yang terakreditasi. Silakan lihat salinan lisensi operasional resmi kami di bawah ini.",
     "certAlt": "DCMS (MM2H) Sdn Bhd — Sertifikat lisensi agen MM2H",
     "qrAlt": "Kode QR dan nomor registrasi lisensi agen MM2H"
   }
@@ -1674,7 +1674,7 @@ window.I18N_DATA.ja = {
   },
   "license": {
     "title": "認定MM2Hエージェント",
-    "text": "私たちはマレーシア・マイ・セカンドホーム・プログラムの認定エージェントであり、当社のMM2Hエージェントライセンスは以下の通りです。",
+    "text": "認可を受け正式なライセンスを持つマレーシア・マイ・セカンドホーム(MM2H)エージェンシーとして、当社は認定されたスポンサーシップサービスを提供しています。当社の公式営業ライセンスの写しを以下にご覧ください。",
     "certAlt": "DCMS (MM2H) Sdn Bhd — MM2Hエージェントライセンス証明書",
     "qrAlt": "MM2HエージェントライセンスのQRコードおよび登録番号"
   }
@@ -2231,7 +2231,7 @@ window.I18N_DATA.km = {
   },
   "license": {
     "title": "ភ្នាក់ងារ MM2H ដែលទទួលបានការអនុញ្ញាត",
-    "text": "យើងខ្ញុំគឺជាភ្នាក់ងារដែលទទួលបានការអនុញ្ញាតសម្រាប់កម្មវិធី Malaysia My Second Home ហើយច្បាប់អនុញ្ញាតភ្នាក់ងារ MM2H របស់យើងខ្ញុំត្រូវបានថតចម្លងខាងក្រោម។",
+    "text": "ក្នុងនាមជាភ្នាក់ងារ Malaysia My Second Home (MM2H) ដែលមានការអនុញ្ញាត និងមានអាជ្ញាប័ណ្ណពេញលេញ យើងខ្ញុំផ្តល់សេវាកម្មឧបត្ថម្ភដែលទទួលបានការទទួលស្គាល់។ សូមមើលច្បាប់ចម្លងអាជ្ញាប័ណ្ណប្រតិបត្តិការផ្លូវការរបស់យើងខ្ញុំខាងក្រោម។",
     "certAlt": "DCMS (MM2H) Sdn Bhd — លិខិតអនុញ្ញាតភ្នាក់ងារ MM2H",
     "qrAlt": "កូដ QR និងលេខចុះបញ្ជីនៃលិខិតអនុញ្ញាតភ្នាក់ងារ MM2H"
   }
@@ -2788,7 +2788,7 @@ window.I18N_DATA.ko = {
   },
   "license": {
     "title": "공인 MM2H 에이전트",
-    "text": "저희는 말레이시아 마이 세컨드 홈 프로그램의 공인 에이전트이며, 저희 MM2H 에이전트 면허증 사본은 아래와 같습니다.",
+    "text": "공인되고 정식 면허를 보유한 말레이시아 마이 세컨드 홈(MM2H) 에이전시로서, 저희는 공인된 스폰서십 서비스를 제공합니다. 아래에서 저희의 공식 영업 면허증 사본을 확인해 주세요.",
     "certAlt": "DCMS (MM2H) Sdn Bhd — MM2H 에이전트 면허 증명서",
     "qrAlt": "MM2H 에이전트 면허 QR 코드 및 등록 번호"
   }
@@ -3345,7 +3345,7 @@ window.I18N_DATA.my = {
   },
   "license": {
     "title": "အသိအမှတ်ပြု MM2H အေးဂျင့်",
-    "text": "ကျွန်ုပ်တို့သည် Malaysia My Second Home အစီအစဉ်အတွက် အသိအမှတ်ပြု အေးဂျင့်တစ်ခုဖြစ်ပြီး ကျွန်ုပ်တို့၏ MM2H အေးဂျင့်လိုင်စင်ကို အောက်တွင် ကူးယူဖော်ပြထားပါသည်။",
+    "text": "ခွင့်ပြုချက်ရရှိပြီး လိုင်စင်အပြည့်အဝရှိသော Malaysia My Second Home (MM2H) အေးဂျင်စီတစ်ခုအနေဖြင့် ကျွန်ုပ်တို့သည် အသိအမှတ်ပြု စပွန်ဆာဝန်ဆောင်မှုများကို ပေးအပ်ပါသည်။ ကျွန်ုပ်တို့၏ တရားဝင်လုပ်ငန်းလိုင်စင် မိတ္တူကို အောက်တွင် ကြည့်ရှုနိုင်ပါသည်။",
     "certAlt": "DCMS (MM2H) Sdn Bhd — MM2H အေးဂျင့်လိုင်စင် အသိအမှတ်ပြုလွှာ",
     "qrAlt": "MM2H အေးဂျင့်လိုင်စင် QR ကုဒ်နှင့် မှတ်ပုံတင်နံပါတ်"
   }
@@ -3902,7 +3902,7 @@ window.I18N_DATA.th = {
   },
   "license": {
     "title": "ตัวแทน MM2H ที่ได้รับการรับรอง",
-    "text": "เราเป็นตัวแทนที่ได้รับการรับรองสำหรับโครงการ Malaysia My Second Home และใบอนุญาตตัวแทน MM2H ของเราแสดงไว้ด้านล่างนี้",
+    "text": "ในฐานะตัวแทนที่ได้รับอนุญาตและมีใบอนุญาตครบถ้วนของโครงการ Malaysia My Second Home (MM2H) เราให้บริการค้ำประกันที่ได้รับการรับรอง โปรดดูสำเนาใบอนุญาตประกอบการอย่างเป็นทางการของเราด้านล่าง",
     "certAlt": "DCMS (MM2H) Sdn Bhd — ใบรับรองใบอนุญาตตัวแทน MM2H",
     "qrAlt": "คิวอาร์โค้ดและหมายเลขทะเบียนใบอนุญาตตัวแทน MM2H"
   }
@@ -4459,7 +4459,7 @@ window.I18N_DATA.zh = {
   },
   "license": {
     "title": "获认证的MM2H代理机构",
-    "text": "我们是马来西亚第二家园计划的认证代理机构,我们的MM2H代理执照副本如下所示。",
+    "text": "作为获授权且持有完整执照的马来西亚第二家园(MM2H)代理机构,我们提供经认可的担保服务。以下为我们官方营业执照的副本。",
     "certAlt": "DCMS (MM2H) Sdn Bhd — MM2H代理执照证书",
     "qrAlt": "MM2H代理执照二维码及注册编号"
   }
