@@ -781,11 +781,12 @@ footer.site-footer {
 }
 .footer-grid {
   display: grid;
-  grid-template-columns: 1.4fr 1fr 1fr 1fr;
+  grid-template-columns: 1.3fr 0.85fr 0.85fr 1.5fr;
   gap: 2.5rem;
   padding-bottom: 2.8rem;
   border-bottom: 1px solid rgba(250,246,238,0.14);
 }
+.footer-col a[href^="mailto:"] { white-space: nowrap; }
 @media (max-width: 860px) { .footer-grid { grid-template-columns: 1fr 1fr; } }
 @media (max-width: 560px) { .footer-grid { grid-template-columns: 1fr; } }
 footer .brand-word { color: var(--cream); }
@@ -807,6 +808,29 @@ footer .footer-col a.brand { display: flex; }
   display: block;
 }
 .footer-col a:hover { color: var(--gold-light); }
+.footer-social {
+  display: flex;
+  gap: 0.7rem;
+  margin-top: 1.2rem;
+}
+.footer-social a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: rgba(250,246,238,0.1);
+  color: var(--cream-deep);
+  margin-bottom: 0;
+  transition: background 0.2s ease, color 0.2s ease, transform 0.2s ease;
+}
+.footer-social a:hover {
+  background: var(--gold-light);
+  color: var(--dark-bg);
+  transform: translateY(-2px);
+}
+.footer-social svg { width: 17px; height: 17px; }
 .footer-bottom {
   display: flex;
   justify-content: space-between;
@@ -816,6 +840,21 @@ footer .footer-col a.brand { display: flex; }
   color: rgba(250,246,238,0.55);
   flex-wrap: wrap;
   gap: 0.8rem;
+}
+.visitor-counter {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+.visitor-counter strong {
+  color: var(--cream);
+  font-weight: 700;
+  background: rgba(250,246,238,0.1);
+  border: 1px solid rgba(201,164,92,0.35);
+  border-radius: 5px;
+  padding: 0.15rem 0.55rem;
+  font-size: 0.85rem;
+  letter-spacing: 0.02em;
 }
 
 /* ---------- WhatsApp float ---------- */

@@ -8,6 +8,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initMobileNav();
   initFaq();
   initImageReveal();
+  initVisitorCounter();
 });
 
 /* ---------------- Language switcher ---------------- */
@@ -156,4 +157,53 @@ function initImageReveal() {
       observer.observe(img);
     }
   });
+}
+
+// ============================================
+// Visitor counter (CounterAPI v2) — shows a site-wide "Total Visitors"
+// figure in the footer. Increments once per browser session (not once
+// per page view), then just displays the current total on further
+// page loads within the same session.
+// ============================================
+function initVisitorCounter() {
+  const el = document.getElementById('total-visitor-count');
+  if (!el) return;
+
+  const WORKSPACE = 'dcmsgroup';
+  const COUNTER = 'totalvisitor';
+  const API_KEY = 'ut_kekBlq88DVmi20ygxFpVRXJTPwvvT9G6ZGbhkCEz';
+  const BASE = `https://api.counterapi.dev/v2/${WORKSPACE}/${COUNTER}`;
+  const SESSION_KEY = 'dcms_visitor_counted';
+
+  function extractCount(json) {
+    if (!json) return null;
+    const d = json.data || json;
+    const candidates = [d.up_count, d.count, d.value, d.total];
+    for (const c of candidates) {
+      if (typeof c === 'number') return c;
+    }
+    return null;
+  }
+
+  function display(n) {
+    if (typeof n === 'number' && !isNaN(n)) {
+      el.textContent = n.toLocaleString();
+    }
+  }
+
+  const alreadyCounted = sessionStorage.getItem(SESSION_KEY);
+  const url = alreadyCounted ? BASE : `${BASE}/up`;
+
+  fetch(url, {
+    headers: { 'Authorization': `Bearer ${API_KEY}` }
+  })
+    .then(res => (res.ok ? res.json() : null))
+    .then(json => {
+      const n = extractCount(json);
+      if (n !== null) {
+        display(n);
+        sessionStorage.setItem(SESSION_KEY, '1');
+      }
+    })
+    .catch(() => { /* silently leave placeholder if the counter is unreachable */ });
 }
