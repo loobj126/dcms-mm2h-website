@@ -160,23 +160,24 @@ function initImageReveal() {
 }
 
 // ============================================
-// Visitor counter (CounterAPI v2) — shows a site-wide "Total Visitors"
-// figure in the footer. Increments once per browser session (not once
-// per page view), then just displays the current total on further
-// page loads within the same session.
+// Visitor counter — shows a site-wide "Total Visitors" figure in the
+// footer. Calls our own serverless proxy (/api/visitor-count) rather
+// than CounterAPI directly, since browsers block direct cross-origin
+// calls that carry an Authorization header (CORS). The proxy runs
+// server-side on Vercel, so it isn't subject to that restriction, and
+// it also keeps the CounterAPI key out of this public JS file.
+//
+// Increments once per browser session (not once per page view), then
+// just displays the current total on further page loads in that session.
 // ============================================
 function initVisitorCounter() {
   const el = document.getElementById('total-visitor-count');
   if (!el) return;
 
-  const WORKSPACE = 'dcmsgroup';
-  const COUNTER = 'totalvisitor';
-  const API_KEY = 'ut_kekBlq88DVmi20ygxFpVRXJTPwvvT9G6ZGbhkCEz';
-  const BASE = `https://api.counterapi.dev/v2/${WORKSPACE}/${COUNTER}`;
   const SESSION_KEY = 'dcms_visitor_counted';
 
   function extractCount(json) {
-    if (!json) return null;
+    if (!json || json.error) return null;
     const d = json.data || json;
     const candidates = [d.up_count, d.count, d.value, d.total];
     for (const c of candidates) {
@@ -192,11 +193,9 @@ function initVisitorCounter() {
   }
 
   const alreadyCounted = sessionStorage.getItem(SESSION_KEY);
-  const url = alreadyCounted ? BASE : `${BASE}/up`;
+  const url = alreadyCounted ? '/api/visitor-count' : '/api/visitor-count?action=up';
 
-  fetch(url, {
-    headers: { 'Authorization': `Bearer ${API_KEY}` }
-  })
+  fetch(url)
     .then(res => (res.ok ? res.json() : null))
     .then(json => {
       const n = extractCount(json);
