@@ -139,7 +139,7 @@ window.I18N_DATA = {
     },
     "footer": {
       "companyName": "DCMS (MM2H) Sdn Bhd",
-      "companyReg": "202301033280 (1854708-T)",
+      "companyReg": "202501033290 (1634700-T)",
       "aboutText": "We guide families and investors through every stage of Malaysia's My Second Home programme — from first eligibility check to settling in.",
       "quickLinks": "Quick Links",
       "linkHome": "Home",
@@ -674,7 +674,7 @@ window.I18N_DATA = {
     },
     "footer": {
       "companyName": "DCMS (MM2H) Sdn Bhd",
-      "companyReg": "202301033280 (1854708-T)",
+      "companyReg": "202501033290 (1634700-T)",
       "aboutText": "我们全程陪伴家庭与投资者完成马来西亚第二家园计划的每一个阶段——从首次资格审核到安居落户。",
       "quickLinks": "快速链接",
       "linkHome": "首页",
@@ -1231,7 +1231,7 @@ window.I18N_DATA = {
     },
     "footer": {
       "companyName": "DCMS (MM2H) Sdn Bhd",
-      "companyReg": "202301033280 (1854708-T)",
+      "companyReg": "202501033290 (1634700-T)",
       "aboutText": "យើងខ្ញុំនាំផ្លូវគ្រួសារ និងវិនិយោគិនឆ្លងកាត់គ្រប់ដំណាក់កាលនៃកម្មវិធី My Second Home របស់ម៉ាឡេស៊ី — ចាប់ពីការត្រួតពិនិត្យលក្ខណៈសម្បត្តិដំបូង រហូតដល់ការតាំងទីលំនៅ។",
       "quickLinks": "តំណភ្ជាប់រហ័ស",
       "linkHome": "ទំព័រដើម",
@@ -1788,7 +1788,7 @@ window.I18N_DATA = {
     },
     "footer": {
       "companyName": "DCMS (MM2H) Sdn Bhd",
-      "companyReg": "202301033280 (1854708-T)",
+      "companyReg": "202501033290 (1634700-T)",
       "aboutText": "ကျွန်ုပ်တို့သည် မိသားစုများနှင့် ရင်းနှီးမြှုပ်နှံသူများအား မလေးရှား My Second Home အစီအစဉ်၏ အဆင့်တိုင်းတွင် လမ်းညွှန်ပေးပါသည် — အရည်အချင်းစစ်ဆေးခြင်း ပထမဆုံးအဆင့်မှသည် နေရာချထားခြင်းအထိ။",
       "quickLinks": "အမြန်လင့်ခ်များ",
       "linkHome": "ပင်မစာမျက်နှာ",
@@ -2345,7 +2345,7 @@ window.I18N_DATA = {
     },
     "footer": {
       "companyName": "DCMS (MM2H) Sdn Bhd",
-      "companyReg": "202301033280 (1854708-T)",
+      "companyReg": "202501033290 (1634700-T)",
       "aboutText": "เราให้คำแนะนำครอบครัวและนักลงทุนตลอดทุกขั้นตอนของโครงการ My Second Home ของมาเลเซีย — ตั้งแต่การตรวจสอบคุณสมบัติครั้งแรก จนถึงการตั้งรกราก",
       "quickLinks": "ลิงก์ด่วน",
       "linkHome": "หน้าแรก",
@@ -2902,7 +2902,7 @@ window.I18N_DATA = {
     },
     "footer": {
       "companyName": "DCMS (MM2H) Sdn Bhd",
-      "companyReg": "202301033280 (1854708-T)",
+      "companyReg": "202501033290 (1634700-T)",
       "aboutText": "Kami membimbing keluarga dan investor melalui setiap tahap program My Second Home Malaysia — mulai dari pemeriksaan kelayakan pertama hingga menetap.",
       "quickLinks": "Tautan Cepat",
       "linkHome": "Beranda",
@@ -3459,7 +3459,7 @@ window.I18N_DATA = {
     },
     "footer": {
       "companyName": "DCMS (MM2H) Sdn Bhd",
-      "companyReg": "202301033280 (1854708-T)",
+      "companyReg": "202501033290 (1634700-T)",
       "aboutText": "저희는 최초 자격 심사부터 정착까지 말레이시아 마이 세컨드 홈 프로그램의 모든 단계에서 가족과 투자자를 안내합니다.",
       "quickLinks": "바로가기",
       "linkHome": "홈",
@@ -4016,7 +4016,7 @@ window.I18N_DATA = {
     },
     "footer": {
       "companyName": "DCMS (MM2H) Sdn Bhd",
-      "companyReg": "202301033280 (1854708-T)",
+      "companyReg": "202501033290 (1634700-T)",
       "aboutText": "私たちは、初回の資格審査から定住まで、マレーシア・マイ・セカンドホーム・プログラムのすべての段階でご家族や投資家の皆様をご案内します。",
       "quickLinks": "クイックリンク",
       "linkHome": "ホーム",

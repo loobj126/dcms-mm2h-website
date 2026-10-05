@@ -204,7 +204,7 @@ document.addEventListener('DOMContentLoaded', () => {
     doc.setFont(PDF_FONT, 'normal');
     doc.setFontSize(8);
     doc.setTextColor(...INK_SOFT);
-    doc.text('202301033280 (1854708-T)', RIGHT, y + 7, { align: 'right' });
+    doc.text('202501033290 (1634700-T)', RIGHT, y + 7, { align: 'right' });
     const addrLines = doc.splitTextToSize('12-03 (2) Stellar Suites, Jalan Puteri 4/7, Bandar Puteri, 47100 Puchong, Selangor Darul Ehsan, Malaysia', 90);
     doc.text(addrLines, RIGHT, y + 12, { align: 'right' });
     const afterAddrY = y + 12 + (addrLines.length - 1) * 3.6;
@@ -297,7 +297,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     doc.setFont(PDF_FONT, 'normal');
     doc.setFontSize(8);
-    doc.text('DCMS (MM2H) Sdn Bhd  |  202301033280 (1854708-T)  |  bj-mm2h@dcmktgsolution.com  |  +603-5040 1349', LEFT, y);
+    doc.text('DCMS (MM2H) Sdn Bhd  |  202501033290 (1634700-T)  |  bj-mm2h@dcmktgsolution.com  |  +603-5040 1349', LEFT, y);
 
     doc.save('DCMS-Legal-Fees-Quote.pdf');
   }
