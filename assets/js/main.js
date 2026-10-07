@@ -9,6 +9,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initFaq();
   initImageReveal();
   initVisitorCounter();
+  initWhatsAppChooser();
 });
 
 /* ---------------- Language switcher ---------------- */
@@ -205,4 +206,31 @@ function initVisitorCounter() {
       }
     })
     .catch(() => { /* silently leave placeholder if the counter is unreachable */ });
+}
+
+/* ---------------- WhatsApp contact chooser ---------------- */
+// One floating WhatsApp button; tapping it opens a small card listing the
+// available contacts. Closes on outside click, Escape, or choosing a contact.
+function initWhatsAppChooser() {
+  const toggle = document.getElementById('wa-toggle');
+  const menu = document.getElementById('wa-menu');
+  if (!toggle || !menu) return;
+
+  function setOpen(open) {
+    menu.hidden = !open;
+    toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+  }
+
+  toggle.addEventListener('click', (e) => {
+    e.stopPropagation();
+    setOpen(menu.hidden);
+  });
+  menu.addEventListener('click', (e) => {
+    e.stopPropagation();
+    if (e.target.closest('.wa-option')) setOpen(false);
+  });
+  document.addEventListener('click', () => setOpen(false));
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && !menu.hidden) { setOpen(false); toggle.focus(); }
+  });
 }

@@ -561,6 +561,9 @@ window.I18N_DATA = {
       "labelMessage": "Message",
       "submitButton": "Send message",
       "formNote": "This form opens your email client with your message pre-filled — nothing is sent automatically."
+    },
+    "whatsapp": {
+      "title": "Chat with us on WhatsApp"
     }
   },
   "zh": {
@@ -1118,6 +1121,9 @@ window.I18N_DATA = {
       "text": "作为获授权且持有完整执照的马来西亚第二家园(MM2H)代理机构,我们提供经认可的担保服务。以下为我们官方营业执照的副本。",
       "certAlt": "DCMS (MM2H) Sdn Bhd — MM2H代理执照证书",
       "qrAlt": "MM2H代理执照二维码及注册编号"
+    },
+    "whatsapp": {
+      "title": "通过 WhatsApp 联系我们"
     }
   },
   "km": {
@@ -1675,6 +1681,9 @@ window.I18N_DATA = {
       "text": "ក្នុងនាមជាភ្នាក់ងារ Malaysia My Second Home (MM2H) ដែលមានការអនុញ្ញាត និងមានអាជ្ញាប័ណ្ណពេញលេញ យើងខ្ញុំផ្តល់សេវាកម្មឧបត្ថម្ភដែលទទួលបានការទទួលស្គាល់។ សូមមើលច្បាប់ចម្លងអាជ្ញាប័ណ្ណប្រតិបត្តិការផ្លូវការរបស់យើងខ្ញុំខាងក្រោម។",
       "certAlt": "DCMS (MM2H) Sdn Bhd — លិខិតអនុញ្ញាតភ្នាក់ងារ MM2H",
       "qrAlt": "កូដ QR និងលេខចុះបញ្ជីនៃលិខិតអនុញ្ញាតភ្នាក់ងារ MM2H"
+    },
+    "whatsapp": {
+      "title": "ជជែកជាមួយយើងតាម WhatsApp"
     }
   },
   "my": {
@@ -2232,6 +2241,9 @@ window.I18N_DATA = {
       "text": "ခွင့်ပြုချက်ရရှိပြီး လိုင်စင်အပြည့်အဝရှိသော Malaysia My Second Home (MM2H) အေးဂျင်စီတစ်ခုအနေဖြင့် ကျွန်ုပ်တို့သည် အသိအမှတ်ပြု စပွန်ဆာဝန်ဆောင်မှုများကို ပေးအပ်ပါသည်။ ကျွန်ုပ်တို့၏ တရားဝင်လုပ်ငန်းလိုင်စင် မိတ္တူကို အောက်တွင် ကြည့်ရှုနိုင်ပါသည်။",
       "certAlt": "DCMS (MM2H) Sdn Bhd — MM2H အေးဂျင့်လိုင်စင် အသိအမှတ်ပြုလွှာ",
       "qrAlt": "MM2H အေးဂျင့်လိုင်စင် QR ကုဒ်နှင့် မှတ်ပုံတင်နံပါတ်"
+    },
+    "whatsapp": {
+      "title": "WhatsApp ဖြင့် ကျွန်ုပ်တို့နှင့် စကားပြောပါ"
     }
   },
   "th": {
@@ -2789,6 +2801,9 @@ window.I18N_DATA = {
       "text": "ในฐานะตัวแทนที่ได้รับอนุญาตและมีใบอนุญาตครบถ้วนของโครงการ Malaysia My Second Home (MM2H) เราให้บริการค้ำประกันที่ได้รับการรับรอง โปรดดูสำเนาใบอนุญาตประกอบการอย่างเป็นทางการของเราด้านล่าง",
       "certAlt": "DCMS (MM2H) Sdn Bhd — ใบรับรองใบอนุญาตตัวแทน MM2H",
       "qrAlt": "คิวอาร์โค้ดและหมายเลขทะเบียนใบอนุญาตตัวแทน MM2H"
+    },
+    "whatsapp": {
+      "title": "แชทกับเราทาง WhatsApp"
     }
   },
   "id": {
@@ -3346,6 +3361,9 @@ window.I18N_DATA = {
       "text": "Sebagai agensi Malaysia My Second Home (MM2H) yang resmi dan berlisensi penuh, kami menyediakan layanan sponsor yang terakreditasi. Silakan lihat salinan lisensi operasional resmi kami di bawah ini.",
       "certAlt": "DCMS (MM2H) Sdn Bhd — Sertifikat lisensi agen MM2H",
       "qrAlt": "Kode QR dan nomor registrasi lisensi agen MM2H"
+    },
+    "whatsapp": {
+      "title": "Chat dengan kami di WhatsApp"
     }
   },
   "ko": {
@@ -3903,6 +3921,9 @@ window.I18N_DATA = {
       "text": "공인되고 정식 면허를 보유한 말레이시아 마이 세컨드 홈(MM2H) 에이전시로서, 저희는 공인된 스폰서십 서비스를 제공합니다. 아래에서 저희의 공식 영업 면허증 사본을 확인해 주세요.",
       "certAlt": "DCMS (MM2H) Sdn Bhd — MM2H 에이전트 면허 증명서",
       "qrAlt": "MM2H 에이전트 면허 QR 코드 및 등록 번호"
+    },
+    "whatsapp": {
+      "title": "WhatsApp으로 문의하기"
     }
   },
   "ja": {
@@ -4460,6 +4481,9 @@ window.I18N_DATA = {
       "text": "認可を受け正式なライセンスを持つマレーシア・マイ・セカンドホーム(MM2H)エージェンシーとして、当社は認定されたスポンサーシップサービスを提供しています。当社の公式営業ライセンスの写しを以下にご覧ください。",
       "certAlt": "DCMS (MM2H) Sdn Bhd — MM2Hエージェントライセンス証明書",
       "qrAlt": "MM2HエージェントライセンスのQRコードおよび登録番号"
+    },
+    "whatsapp": {
+      "title": "WhatsAppでチャットする"
     }
   }
 };

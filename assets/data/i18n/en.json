@@ -553,5 +553,8 @@
     "labelMessage": "Message",
     "submitButton": "Send message",
     "formNote": "This form opens your email client with your message pre-filled — nothing is sent automatically."
+  },
+  "whatsapp": {
+    "title": "Chat with us on WhatsApp"
   }
 }
