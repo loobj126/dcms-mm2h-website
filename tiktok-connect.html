@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Connect TikTok – DCMS Social Publisher</title>
+<meta name="robots" content="noindex">
+<meta name="referrer" content="no-referrer">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self'; img-src 'self'; connect-src 'none'; form-action 'none'; base-uri 'none'">
+<link rel="stylesheet" href="tiktok-pages.css">
+</head>
+<body>
+<header><div class="in"><a href="/">DCMS (MM2H) Sdn Bhd</a><span class="muted">Social Publisher</span></div></header>
+<main><div class="card">
+  <h1>Connect TikTok</h1>
+  <p class="muted">DCMS Social Publisher is DCMS's internal tool for publishing our own approved MM2H content.
+  Connecting lets it upload videos to the connected TikTok account's <b>inbox as drafts</b>; you review and post them yourself in the TikTok app.</p>
+
+  <div id="start">
+    <h2>What the tool will access</h2>
+    <ul>
+      <li>Your TikTok display name and profile picture (to show which account is connected)</li>
+      <li>Permission to upload videos to your TikTok inbox as drafts</li>
+    </ul>
+    <p><a id="connect" class="btn" href="#">Connect with TikTok</a></p>
+    <p id="nokey" class="err hide">Setup not finished: the TikTok client key is not set on this page yet.</p>
+  </div>
+
+  <div id="done" class="hide">
+    <h2 class="ok">✓ TikTok approved the connection</h2>
+    <p>Copy this one-time code and paste it into the DCMS Social Publisher setup on the office computer within 5 minutes:</p>
+    <div id="code" class="code"></div>
+    <p><button id="copy" class="btn light" type="button">Copy code</button> <span id="copied" class="ok hide">Copied</span></p>
+    <p class="muted">For your security this page does not store the code. You can disconnect at any time in the TikTok app:
+    Profile → ☰ → Settings and privacy → Security → Manage app permissions.</p>
+  </div>
+
+  <div id="failed" class="hide">
+    <h2 class="err">Connection not completed</h2>
+    <p id="why" class="muted"></p>
+    <p><a class="btn light" href="tiktok-connect.html">Try again</a></p>
+  </div>
+</div></main>
+<footer>© DCMS (MM2H) Sdn Bhd · <a href="privacy-policy.html">Privacy Policy</a> · <a href="terms-of-service.html">Terms of Service</a> · <a href="/">dcmsgroup.com.my</a></footer>
+<script>
+/* ===== set once after creating the TikTok app (the client key is public, NOT the client secret) ===== */
+var CLIENT_KEY = "";
+var SCOPES = "user.info.basic,video.upload";
+/* ================================================================================================== */
+var REDIRECT = location.origin + location.pathname;
+var q = new URLSearchParams(location.search);
+function show(id){document.getElementById(id).classList.remove("hide");}
+function hide(id){document.getElementById(id).classList.add("hide");}
+var expected = null;
+try { expected = sessionStorage.getItem("tt_state"); sessionStorage.removeItem("tt_state"); } catch (e) {}
+if (q.get("code") && (!expected || q.get("state") !== expected)) {
+  /* the connection was not started from this browser - refuse to show the code */
+  hide("start"); show("failed");
+  document.getElementById("why").textContent = "This connection was not started from this page in this browser, so the code is not shown. Click Try again and start with the Connect button.";
+  history.replaceState(null, "", REDIRECT);
+} else if (q.get("code")) {
+  hide("start"); show("done");
+  document.getElementById("code").textContent = q.get("code");
+  document.getElementById("copy").onclick = function(){
+    navigator.clipboard.writeText(q.get("code")).then(function(){show("copied");});
+  };
+  history.replaceState(null, "", REDIRECT);   /* remove the code from the address bar */
+} else if (q.get("error")) {
+  hide("start"); show("failed");
+  document.getElementById("why").textContent = (q.get("error_description") || q.get("error")) + " – nothing was connected.";
+} else if (!CLIENT_KEY) {
+  hide("connect"); show("nokey");
+} else {
+  var buf = new Uint8Array(16); crypto.getRandomValues(buf);
+  var state = Array.from(buf, function(b){return b.toString(16).padStart(2, "0");}).join("");
+  try { sessionStorage.setItem("tt_state", state); } catch (e) {}
+  document.getElementById("connect").href = "https://www.tiktok.com/v2/auth/authorize/?client_key=" + encodeURIComponent(CLIENT_KEY)
+    + "&scope=" + encodeURIComponent(SCOPES) + "&response_type=code&redirect_uri=" + encodeURIComponent(REDIRECT)
+    + "&state=" + state;
+}
+</script>
+</body>
+</html>
